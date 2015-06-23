@@ -41,7 +41,7 @@ class Formatter:
     words = self.remove_digits(words)
     words = self.remove_short_words(words)
     words = self.remove_empties(words)
-    # words = self.remove_duplicates(words)
+    words = self.remove_duplicates(words)
     return words
 
 

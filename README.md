@@ -1,6 +1,6 @@
 # Hamster
 
-A simple *Ham/Spam* web service. 
+A simple *Ham/Spam* web service.This is an experimental project to support ingest filtering for [umbrasearch.org](http://umbrasearch.org).
 
 ## Installation
 

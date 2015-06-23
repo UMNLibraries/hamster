@@ -8,6 +8,10 @@ class Formatter:
   def __init__(self, text, split_token):
     self.words = text.split(split_token)
 
+  def to_ascii(self, words):
+    f = lambda text : text.encode('ascii','ignore')
+    return map(f, words)
+
   def strip_words(self, words):
     return map(str.strip, words)
 
@@ -34,6 +38,7 @@ class Formatter:
 
   def run_all(self):
     words = self.words
+    words = self.to_ascii(words)
     words = self.strip_words(words)
     words = self.lower_words(words)
     words = self.lower_words(words)

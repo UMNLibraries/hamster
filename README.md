@@ -16,25 +16,28 @@ $ pip install flask
 
 ## Usage
 
-* Load spam and ham data on a publicly accessible URLs. This data should be rows of words delimited by newlines. e.g.:
-*http://localhost:3000/flags/1* **<-Spam as reported by an app of your own making**
-```
-I HATE JUSTIN BIEBER comedy 
-I LOVE JUSTIN BIEBER comedy 
-JUSTIN BIEBER WEDDING comedy 
-```
-
-*http://localhost:3000/flags/2* **<-Ham as reported by an app of your own making**
-```
-This content is really good it is full of stars and cats
-Text from a record that someone 'liked' in my app here 
-Text from a record that someone shared in my app here 
-```
 * Start the app: `python hamster.py'
 * Submit ham, spam and words you want classified as ham or spam to the app:
 
 ```
-$ curl http://localhost:5000/\?ham_url\=http://localhost:3000/flag/2\&spam_url\=http://localhost:3000/flag/1\&test_phrase\=HATE JUSTIN BIEBER commedy stars cats'
+curl --data "spam=
+I HATE JUSTIN BIEBER comedy
+JUSTIN BIEBER WEDDING comedy
+&ham=
+story about thew big bang
+recently in science discovers were made
+&test=justin beiber recently discovers invention with science" http://localhost:5000
+> ham
+```
+
+```
+curl --data "spam=
+I HATE JUSTIN BIEBER comedy
+JUSTIN BIEBER WEDDING comedy
+&ham=
+story about thew big bang
+recently in science discovers were made
+&test=justin beiber comedy recently discovers invention with science wedding" http://localhost:5000
 > spam
 ```
 

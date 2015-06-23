@@ -4,19 +4,14 @@ from formatter import Formatter
 from bayeser import Bayeser
 from fetcher import Fetcher
 
-import json
-
 app = Flask(__name__)
 
-import pprint
-
-@app.route("/")
+@app.route("/", methods=['POST'])
 def hello():
-    pp = pprint.PrettyPrinter(indent=4)
     fetcher = Fetcher()
-    ham_phrases  = Formatter(fetcher.fetch(request.args.get('ham_url', '')), "\n").run_all()
-    spam_phrases = Formatter(fetcher.fetch(request.args.get('spam_url', '')), "\n").run_all()
-    test_phrase = request.args.get('test_phrase', '')
+    ham_phrases  = Formatter(request.form['ham'], "\n").run_all()
+    spam_phrases = Formatter(request.form['spam'], "\n").run_all()
+    test_phrase = request.form['test']
     classifier = Bayeser(ham_phrases, spam_phrases, test_phrase)
     return classifier.classify()
 

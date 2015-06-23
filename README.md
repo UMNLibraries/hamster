@@ -30,7 +30,7 @@ This content is really good it is full of stars and cats
 Text from a record that someone 'liked' in my app here 
 Text from a record that someone shared in my app here 
 ```
-* Start the app: `python hamster.py'
+* Start the app: `python hamster.py`
 * Submit ham, spam and words you want classified as ham or spam to the app:
 
 ```

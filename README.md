@@ -25,7 +25,7 @@ I HATE JUSTIN BIEBER comedy
 JUSTIN BIEBER WEDDING comedy
 &ham=
 story about thew big bang
-recently in science discovers were made
+recently in science discoveries were made
 &test=justin beiber recently discovers invention with science" http://localhost:5000
 > ham
 ```
@@ -36,7 +36,7 @@ I HATE JUSTIN BIEBER comedy
 JUSTIN BIEBER WEDDING comedy
 &ham=
 story about thew big bang
-recently in science discovers were made
+recently in science discoveries were made
 &test=justin beiber comedy recently discovers invention with science wedding" http://localhost:5000
 > spam
 ```

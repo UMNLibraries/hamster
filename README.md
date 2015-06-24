@@ -6,7 +6,7 @@ A simple *Ham/Spam* web service.This is an experimental project to support inges
 
 ### Requirements
 
-* Python (e.g. via [https://github.com/yyuu/pyenv])
+* Python (e.g. via [pyenv](https://github.com/yyuu/pyenv)
 * Natural Language Toolkit and Flask
 
 ```

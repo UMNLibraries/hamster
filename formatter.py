@@ -27,7 +27,7 @@ class Formatter:
     return map(f, words)
 
   def remove_short_words(self, words):
-    f = lambda text : ' '.join(word for word in text.split() if len(word) > 4)
+    f = lambda text : ' '.join(word for word in text.split() if len(word) > 3)
     return map(f, words)
 
   def remove_empties(self, words):

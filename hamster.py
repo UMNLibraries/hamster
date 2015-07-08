@@ -1,14 +1,11 @@
 from flask import Flask, request
-
 from formatter import Formatter
 from bayeser import Bayeser
-from fetcher import Fetcher
 
 app = Flask(__name__)
 
 @app.route("/", methods=['POST'])
 def hello():
-    fetcher = Fetcher()
     ham_phrases  = Formatter(request.form['ham'], "\n").run_all()
     spam_phrases = Formatter(request.form['spam'], "\n").run_all()
     test_phrase = request.form['test']

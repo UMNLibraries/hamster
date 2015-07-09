@@ -16,7 +16,7 @@ $ pip install gunicorn
 
 ## Usage
 
-* Start the app: `gunicorn -w 4 -b localhost:5000 hamster:run'
+* Start the app: `gunicorn -w 4 -b localhost:5000 hamster:Run`
 * Submit ham, spam and words you want classified as ham or spam to the app:
 
 ```

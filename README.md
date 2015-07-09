@@ -11,12 +11,12 @@ A simple *Ham/Spam* web service.This is an experimental project to support inges
 
 ```
 $ pip install nltk
-$ pip install flask
+$ pip install gunicorn
 ```
 
 ## Usage
 
-* Start the app: `python hamster.py'
+* Start the app: `gunicorn -w 4 -b localhost:5000 hamster:run'
 * Submit ham, spam and words you want classified as ham or spam to the app:
 
 ```
@@ -25,7 +25,7 @@ I HATE JUSTIN BIEBER comedy
 JUSTIN BIEBER WEDDING comedy
 &ham=
 story about thew big bang
-recently in science discoveries were made
+recently in science discovers were made
 &test=justin beiber recently discovers invention with science" http://localhost:5000
 > ham
 ```
@@ -36,7 +36,7 @@ I HATE JUSTIN BIEBER comedy
 JUSTIN BIEBER WEDDING comedy
 &ham=
 story about thew big bang
-recently in science discoveries were made
+recently in science discovers were made
 &test=justin beiber comedy recently discovers invention with science wedding" http://localhost:5000
 > spam
 ```

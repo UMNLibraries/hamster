@@ -4,8 +4,8 @@ from bayeser import Bayeser
 from sure import expect
 
 class BayeserTest(unittest.TestCase):
-  spam_words = ['justin bieber is so cool', 'russian hiphop is the best', 'viagra on sale now']
-  ham_words  = ['african american performance artist', 'jazz age show revives interest in jazz', 'gallery opening portraying slavery']
+  spam_words = set(['justin bieber is so cool', 'russian hiphop is the best', 'viagra on sale now'])
+  ham_words  = set(['african american performance artist', 'jazz age show revives interest in jazz', 'gallery opening portraying slavery'])
 
   def test_ham(self):
     test_words = 'african american bieber cool artist jazz'

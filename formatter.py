@@ -1,8 +1,6 @@
 import string
 from string import digits
 
-import pprint
-
 class Formatter:
 
   def __init__(self, text, split_token):

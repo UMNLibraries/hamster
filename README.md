@@ -7,10 +7,11 @@ A simple *Ham/Spam* web service.This is an experimental project to support inges
 ### Requirements
 
 * Python (e.g. via [pyenv](https://github.com/yyuu/pyenv))
-* Natural Language Toolkit and Flask
+* Natural Language Toolkit, Flask, and (optionally) gunicorn
 
 ```
 $ pip install nltk
+$ pip install flask
 $ pip install gunicorn
 ```
 
